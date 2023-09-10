@@ -32,31 +32,36 @@ main {
   background-color: #fff;
 }
 .section {
+  display: flex;
   padding: 120px 0;
 }
 .container {
-  max-width: 1440px;
+  width: 1158px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 15px;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.footer-container {
+  margin: 101.5px auto 100px;
+  display: block;
+  align-items: center;
 }
 .page-container {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-.header-inner {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
+.center {
+  justify-content: center;
 }
-.header-address {
-  display: flex;
-  gap: 40px;
-}
+
 .header-link {
   display: flex;
-  gap: 24px;
+  align-items: center;
   flex-grow: 1;
+  justify-content: center;
 }
 
 .heero-first {
@@ -75,6 +80,7 @@ main {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 .heero-second {
   color: #2e2f42;
@@ -83,16 +89,41 @@ main {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   text-align: center;
+  margin-bottom: 72px;
+}
+.hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.job-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.job-list {
+  display: inline-block;
+  width: 264;
 }
 .text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+.team-cards-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
 
 .logo {
-  align-items: center;
-  display: flex;
   color: #4d5ae5;
   font-family: Raleway, sans-serif;
   font-size: 18px;
@@ -103,10 +134,13 @@ main {
   text-decoration: none;
 }
 .logo-studio {
+  display: inline-block;
   color: #2e2f42;
+  margin-right: auto;
 }
 .nav-link {
   display: inline-block;
+  margin-right: auto;
   padding: 24px 0;
   color: #2e2f42;
   font-size: 16px;
@@ -117,6 +151,7 @@ main {
 .nav-menu {
   display: flex;
   gap: 40px;
+  margin-left: 76px;
 }
 .nav-link:hover,
 .nav-link:focus,
@@ -130,6 +165,7 @@ main {
   font-style: normal;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-left: auto;
 }
 .address-menu {
   display: flex;
@@ -151,13 +187,64 @@ main {
   background: #2e2f42;
 }
 .section-contacts {
+  display: block;
+  padding: 120px 0;
   background: #f4f4fd;
 }
-.team-card-background {
+.section-portfolio {
+  display: block;
+  padding: 120px 0;
+  background: #fff;
+}
+.team-card .team-cards-menu {
+  width: calc((100% - 24px) / 4);
   background-color: #fff;
 }
-
+.portfolio-menu .porfolio-card {
+  width: calc((100% - 24px) / 3);
+}
+.team-card {
+  display: block;
+  padding-bottom: 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  border-radius: 0px 0px 4px 4px;
+  background: var(--WHITE, #fff);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+.team-card-text {
+  display: block;
+  align-items: center;
+  margin: 32px auto;
+}
+.porfolio-card {
+  display: inline-block;
+  width: 360px;
+  height: 420px;
+  padding-bottom: 0px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.portfolio-card-text {
+  display: block;
+  align-items: center;
+  margin: 32px auto;
+  border-top: none;
+  border: 1px solid var(--CORNFLOWER, #e7e9fc);
+  background: var(--WHITE, #fff);
+}
 .button {
+  display: block;
+  margin: auto;
+  padding: 16px 32px;
+  align-items: flex-start;
+  border-radius: 4px;
+  background: var(--IRIS, #4d5ae5);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   color: #fff;
   font-size: 16px;
   font-weight: 500;
@@ -184,9 +271,13 @@ main {
   text-decoration: none;
 }
 .logo-footer-white {
+  display: inline-block;
   color: #f4f4fd;
+  margin-right: auto;
+  margin-bottom: 17.5px;
 }
 .text-footer {
+  display: block;
   color: #f4f4fd;
   line-height: 1.5;
   letter-spacing: 0.02em;
