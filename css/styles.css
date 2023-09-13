@@ -248,7 +248,7 @@ main {
 .portfolio-card-text {
   display: block;
   align-items: center;
-  margin: 32px auto;
+  margin: 0px auto;
   padding: 32px 16px;
   border: 1px solid var(--CORNFLOWER, #e7e9fc);
   border-top: none;
